@@ -1,35 +1,41 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.edu.ifro;
 
+import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXTextField;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
-/**
- *
- * @author 04097711202
- */
 public class MenuPrincipalController implements Initializable {
     
+   
     @FXML
-    private Label label;
+    private JFXTextField txt1;
+    @FXML
+    private JFXTextField txt2;
+    @FXML
+    private JFXTextField txtResultado;
+    @FXML
+    private JFXButton btnsoma;
     
-    @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
-    }
+    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+    
     }    
+
+    @FXML
+    private void soma(ActionEvent event) {
+       double n1,n2,Resultado;
+       n1=Double.parseDouble(txt1.getText());
+       n2=Double.parseDouble(txt2.getText());
+       Resultado=n1+n2;
+       txtResultado.setText(""+Resultado);
+    }
     
 }
