@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="br.edu.ifro.MenuPrincipalController">
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.MenuPrincipalController">
     <children>
         <Button fx:id="button" layoutX="225.0" layoutY="161.0" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="81.0" text="Click Aqui" />
         <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <JFXButton layoutX="160.0" layoutY="88.0" />
     </children>
 </AnchorPane>
