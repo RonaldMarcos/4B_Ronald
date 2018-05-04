@@ -9,6 +9,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import java.io.IOException;
 
 public class MenuPrincipalController implements Initializable {
     
@@ -36,6 +40,28 @@ public class MenuPrincipalController implements Initializable {
        n2=Double.parseDouble(txt2.getText());
        Resultado=n1+n2;
        txtResultado.setText(""+Resultado);
+    }
+
+    @FXML
+    private void abrirCadstroAluno(ActionEvent event) {
+    
+
+try{
+    FXMLLoader fxmlLoader = new FXMLLoader();
+    fxmlLoader.setLocation(getClass().getResource("Aluno.fxml"));
+    Scene scene = new Scene(fxmlLoader.load(),900,682);
+    Stage stage = new Stage();
+    stage.setTitle("Cadastrar Aluno");
+    stage.setScene(scene);
+    stage.show();
+}
+catch(IOException e){
+
+}
+    }
+
+    @FXML
+    private void Fechar(ActionEvent event) {
     }
     
 }
